@@ -1,0 +1,11 @@
+Create a data set with following schema in CSV
+
+1. Structure of data (ID,Case Number,Date,Block,IUCR,Primary Type,Description,Location Description,Arrest,Domestic,Beat,District,Ward,Community Area,FBI Code,X Coordinate,Y Coordinate,Year,Updated On,Latitude,Longitude,Location)
+2. File format - text file
+3. Delimiter - “,” (use regex while splitting split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1), as there are some fields with comma and enclosed using double quotes.
+4. Get top 3 crime types based on number of incidents in RESIDENCE area using “Location Description”
+5. Store the result in S3 path
+    Output Fields: Crime Type, Number of Incidents
+    Output File Format: JSON
+    Output Delimiter: N/A
+    Output Compression: gzip
